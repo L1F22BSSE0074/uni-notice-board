@@ -2,61 +2,53 @@
 
 /* Basic reset */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f4ff; /* soft light blue page background */
-    color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4ff;
+  color: #333333;
 }
 
 /* Header */
 h1 {
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-    background-color: #004aad;  /* deep blue header */
-    color: white;
+  text-align: center;
+  margin-top: 0;
+  padding: 20px;
+  background-color: #004aad;
+  color: #ffffff;
 }
 
-/* Navigation menu bar */
+/* Navigation menu */
 nav {
-    text-align: center;
-    padding: 12px;
-    background-color: #cfe2ff; /* light blue navbar background */
+  text-align: center;
+  margin: 0;
+  padding: 12px;
+  background-color: #cfe2ff;
 }
 
 /* Navigation links */
 nav a {
-    text-decoration: none;
-    margin: 0 12px;
-    padding: 6px 10px;
-    color: #004aad;
-    font-weight: bold;
-    border-radius: 6px;
+  text-decoration: none;
+  margin: 0 12px;
+  padding: 6px 10px;
+  color: #004aad;
+  font-weight: bold;
+  border-radius: 6px;
 }
 
-/* Hover effect */
+/* Hover state */
 nav a:hover {
-    background-color: #004aad;
-    color: white;
+  text-decoration: underline;
+  background-color: #004aad;
+  color: #ffffff;
 }
 
-/* Content paragraphs / text blocks */
+/* Paragraphs */
 p {
-    max-width: 800px;
-    margin: 15px auto;
-    padding: 10px;
-    line-height: 1.6;
-    background-color: #ffffff; /* white card look */
-    border-radius: 8px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Optional footer (if you add one) */
-footer {
-    text-align: center;
-    padding: 12px;
-    margin-top: 20px;
-    background-color: #004aad;
-    color: white;
+  max-width: 800px;
+  margin: 15px auto;
+  padding: 10px;
+  line-height: 1.6;
+  background-color: #ffffff;
+  border-radius: 8px;
 }
