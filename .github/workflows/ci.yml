@@ -55,7 +55,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t yourdockerhubusername/uni-notice-board .
+        run: docker build -t l1f22bsse0074/uni-notice-board .
 
       - name: Push Docker Image
-        run: docker push yourdockerhubusername/uni-notice-board
+        run: docker push l1f22bsse0074/uni-notice-board
