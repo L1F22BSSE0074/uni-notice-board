@@ -4,6 +4,7 @@
   "description": "",
   
   "scripts": {
+    "dev": "parcel src/index.html",
     "lint:html": "htmlhint src/**/*.html",
     "lint:css": "stylelint styles/**/*.css",
     "build": "parcel build src/index.html --dist-dir dist"
