@@ -5,35 +5,58 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f0f4ff; /* soft light blue page background */
     color: #333;
 }
 
 /* Header */
 h1 {
     text-align: center;
-    margin-top: 20px;
+    margin: 0;
+    padding: 20px;
+    background-color: #004aad;  /* deep blue header */
+    color: white;
 }
 
-/* Navigation menu */
+/* Navigation menu bar */
 nav {
     text-align: center;
-    margin: 20px 0;
+    padding: 12px;
+    background-color: #cfe2ff; /* light blue navbar background */
 }
 
+/* Navigation links */
 nav a {
     text-decoration: none;
-    margin: 0 10px;
-    color: #007bff;
+    margin: 0 12px;
+    padding: 6px 10px;
+    color: #004aad;
+    font-weight: bold;
+    border-radius: 6px;
 }
 
+/* Hover effect */
 nav a:hover {
-    text-decoration: underline;
+    background-color: #004aad;
+    color: white;
 }
 
-/* Paragraphs */
+/* Content paragraphs / text blocks */
 p {
     max-width: 800px;
-    margin: 10px auto;
-    line-height: 1.5;
+    margin: 15px auto;
+    padding: 10px;
+    line-height: 1.6;
+    background-color: #ffffff; /* white card look */
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional footer (if you add one) */
+footer {
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #004aad;
+    color: white;
 }
