@@ -1,131 +1,39 @@
 /* styles/style.css */
 
-/* ---------------------------
-   🎨 GLOBAL COLOR VARIABLES
----------------------------- */
-:root {
-    --primary-color: #0056b3;
-    --primary-light: #e6f0ff;
-    --secondary-color: #28a745;
-    --danger-color: #dc3545;
-    --text-color: #333333;
-    --background-color: #f7f9fc;
-    --card-background: #ffffff;
-    --border-color: #dddddd;
-}
-
-/* ---------------------------
-   🔄 BASIC RESET
----------------------------- */
+/* Basic reset */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* ---------------------------
-   🏫 HEADER STYLES
----------------------------- */
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 15px 0;
+/* Header */
+h1 {
     text-align: center;
+    margin-top: 20px;
 }
 
-h1, h2, h3 {
-    color: var(--primary-color);
-    margin-top: 10px;
-}
-
-/* ---------------------------
-   📌 NAVIGATION MENU
----------------------------- */
+/* Navigation menu */
 nav {
     text-align: center;
     margin: 20px 0;
-    background: var(--primary-light);
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
     text-decoration: none;
-    margin: 0 12px;
-    color: var(--primary-color);
-    font-weight: bold;
+    margin: 0 10px;
+    color: #007bff;
 }
 
 nav a:hover {
-    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
-/* ---------------------------
-   📝 CONTENT PARAGRAPHS
----------------------------- */
+/* Paragraphs */
 p {
-    max-width: 900px;
-    margin: 12px auto;
-    line-height: 1.6;
-}
-
-/* ---------------------------
-   🧾 NOTICE / CARD BOXES
----------------------------- */
-.notice-card {
-    background: var(--card-background);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 15px;
-    max-width: 900px;
-    margin: 15px auto;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.notice-card h3 {
-    color: var(--primary-color);
-}
-
-/* ---------------------------
-   🔘 BUTTON STYLES
----------------------------- */
-button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 8px 14px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--secondary-color);
-}
-
-/* ---------------------------
-   📢 STATUS LABEL COLORS
----------------------------- */
-.success {
-    color: var(--secondary-color);
-}
-
-.error {
-    color: var(--danger-color);
-}
-
-.info {
-    color: var(--primary-color);
-}
-
-/* ---------------------------
-   🦶 FOOTER
----------------------------- */
-footer {
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
-    background-color: var(--primary-color);
-    color: white;
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.5;
 }
