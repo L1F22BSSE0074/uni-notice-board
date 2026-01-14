@@ -1,0 +1,39 @@
+/* styles/style.css */
+
+/* Basic reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Navigation menu */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #007bff;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Paragraphs */
+p {
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.5;
+}
