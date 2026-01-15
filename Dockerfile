@@ -1,14 +1,14 @@
-# Use nginx to serve static files
+# Use lightweight Nginx
 FROM nginx:alpine
 
-# Set working directory in nginx html folder
-WORKDIR /usr/share/nginx/html
+# Remove default Nginx HTML
+RUN rm -rf /usr/share/nginx/html/*
 
-# Copy all files from your repo to nginx
-COPY . .
+# Copy built files from dist/ into Nginx HTML folder
+COPY dist/ /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
 
-# Start nginx in foreground
+# Start Nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]
