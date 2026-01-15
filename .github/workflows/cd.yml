@@ -23,8 +23,12 @@ jobs:
 
       - name: Pull Docker Image
         run: |
-          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/your-image-name:latest
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/uni-notice-board:latest
 
       - name: Trigger Render Deployment
         run: |
-          curl -X POST ${{ secrets.RENDER_CALLBACK_URL }}
+          response=$(curl -s -o /dev/null -w "%{http_code}" -X POST ${{ secrets.RENDER_CALLBACK_URL }})
+          if [ "$response" -ne 200 ]; then
+            echo "Render deployment failed with status $response"
+            exit 1
+          fi
