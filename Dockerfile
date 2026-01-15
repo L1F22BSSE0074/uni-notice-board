@@ -1,10 +1,10 @@
-# Use a lightweight nginx image for serving static files
+# Use nginx to serve static files
 FROM nginx:alpine
 
-# Set working directory in container
+# Set working directory in nginx html folder
 WORKDIR /usr/share/nginx/html
 
-# Copy all static website files into nginx html folder
+# Copy all files from your repo to nginx
 COPY . .
 
 # Expose port 80
