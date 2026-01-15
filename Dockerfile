@@ -1,30 +1,14 @@
-# Stage 1: Build
-FROM node:18-alpine AS builder
+# Use a lightweight nginx image for serving static files
+FROM nginx:alpine
 
-WORKDIR /app
+# Set working directory in container
+WORKDIR /usr/share/nginx/html
 
-# Copy package files and install dependencies
-COPY package*.json ./
-RUN npm install
-
-# Copy source code and build
+# Copy all static website files into nginx html folder
 COPY . .
-RUN npm run build
 
-# Stage 2: Production image
-FROM node:18-alpine
+# Expose port 80
+EXPOSE 80
 
-WORKDIR /app
-
-# Copy built files from builder
-COPY --from=builder /app/dist ./dist
-COPY package*.json ./
-
-# Install only production dependencies
-RUN npm install --only=production
-
-# Expose port your app uses
-EXPOSE 3000
-
-# Start app
-CMD ["node", "dist/index.js"]
+# Start nginx in foreground
+CMD ["nginx", "-g", "daemon off;"]
