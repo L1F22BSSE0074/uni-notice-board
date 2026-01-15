@@ -1,14 +1,12 @@
-# Use lightweight Nginx
+FROM node:18-alpine AS build
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
 FROM nginx:alpine
-
-# Remove default Nginx HTML
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copy built files from dist/ into Nginx HTML folder
-COPY dist/ /usr/share/nginx/html
-
-# Expose port 80
+COPY --from=build /app/dist/ /usr/share/nginx/html
 EXPOSE 80
-
-# Start Nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]
